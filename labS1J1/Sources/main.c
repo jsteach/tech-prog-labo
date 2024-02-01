@@ -128,6 +128,7 @@ int test_code(FILE* f) {
 			else {
 				printf("Tu as un erreur dans: String_is_palindrome !\n");
 				result = 1;
+				isGood = 0;
 			}
 		}
 		else if (ligneCount <= 6) {
