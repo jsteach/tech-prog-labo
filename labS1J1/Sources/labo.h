@@ -4,7 +4,7 @@
 
 
 /*
-* Faire une fonction qui retourne a sous-tableau de character de celui passer. 
+* Faire une fonction qui retourne un sous-tableau de character a partir de celui passer(paramètre texte). 
 */
 char* sousTexte(char* texte, int from, int to);
 
