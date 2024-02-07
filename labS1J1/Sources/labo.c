@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 #include "labo.h"
 
 /*
@@ -49,19 +50,23 @@ int String_is_palindrome(String* s) {
 */
 void bubbleSort(int elements[], int n) {
 	int temp = 0;
-	int echanger = 0;
+	bool echanger;
+	int i, j = 0;
 
-	for (int i = 0; i <= sizeof(elements)-1; i++) {
-		if (elements[i] > elements[i + 1]) {
-			temp = elements[i];
-			elements[i] = elements[i + 1];
-			elements[i + 1] = temp;
+	for (i = 0; i < n-1; i++) {
+		echanger = false;
+		for (j = 0; i < n - i - 1; j++) {
 
-			echanger = 1;
+			if (elements[j] > elements[j+ 1]) {
+				temp = elements[j];
+				elements[j] = elements[j + 1];
+				elements[j + 1] = temp;
+				echanger = true;
+			}
 		}
-		if (i >= sizeof(elements) - 1 && echanger == 1) {
-			echanger = 0;
-			i--;
-		}
+		if (echanger == false)
+			break;
+		
 	}
+	printf(elements[i]);
 }
