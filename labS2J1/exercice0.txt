@@ -1,0 +1,9 @@
+void sort
+
+L5 O(n)
+L7 O(n)
+
+L20 O(k)
+
+Total: O(n^2)
+

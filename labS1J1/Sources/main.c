@@ -86,7 +86,7 @@ int test_code(FILE* f) {
 						from = atoi(text);
 						memset(text, 0, len);
 					}
-					else if (ot == -1) {
+					else if (ot  == -1) {
 						ot = atoi(text);
 						memset(text, 0, len);
 					}

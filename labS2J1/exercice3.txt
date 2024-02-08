@@ -1,0 +1,8 @@
+int subSearch
+
+L5 O(n)
+L6 O(k)
+L11 O(q)
+L12 O(q)
+
+total: O(n + k + q)
