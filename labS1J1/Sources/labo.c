@@ -65,6 +65,9 @@
 		//He's gotta be strong, and he's gotta be fast
 		//And he's gotta be fresh from the fight
 
+
+		//I don't know who's that ^ guy but I bet he dosen't know how to correctly read instructions!
+
 /*
 * Faire une fonction qui retourne un sous-tableau de character de celui passer.
 */
@@ -91,7 +94,7 @@ void set_String(char* text, String* s) {
 		s->characters[i] = text[i];
 		if (s->characters[i] == NULL) {
 
-			s->length = i;
+			s->length = i-1;
 			
 			return s->characters;
 
@@ -123,7 +126,7 @@ int String_is_palindrome(String* s) {
 		}
 
 	}
-	return 2;
+	return 1;
 
 	// Voir avec le prof ( lignecount impossible, Verifier bon chemin)
 }

@@ -1,0 +1,8 @@
+6 O(n)
+21 O(k)
+22 O(q)
+25 O(n)
+31 O(q)
+32 O(s)
+
+Total: O(n+k*q*n*s)
