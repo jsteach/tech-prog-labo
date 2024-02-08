@@ -4,7 +4,7 @@
 
 
 /*
-* Faire une fonction qui retourne un sous-tableau de character a partir de celui passer(paramètre texte).
+* Faire une fonction qui retourne un sous-tableau de character a partir de celui passer(paramÃ¨tre texte).
 */
 char* sousTexte(char* texte, int from, int to) {
 
@@ -17,7 +17,7 @@ char* sousTexte(char* texte, int from, int to) {
 }
 
 /*
-* Faire une fonction qui copie le contenu du tableau de character dans la propriété de data
+* Faire une fonction qui copie le contenu du tableau de character dans la propriÃ©tÃ© de data
 * de la structure string.
 */
 void set_String(char* text, String* s) {
@@ -31,28 +31,24 @@ void set_String(char* text, String* s) {
 }
 
 /*
-* Faire une fonction qui vérifie si un mot est un palindrome i.e. kayak, racecar...
+* Faire une fonction qui vÃ©rifie si un mot est un palindrome i.e. kayak, racecar...
 * Si le mot est un palindrome retourner 1 sinon 0
 */
 int String_is_palindrome(String* s) {
 
 	int i;
-	
 
 	for (i = 0; i < s->length; i++) {
 
 		if (s->characters[i] != s->characters[s->length - i - 1]) {
-
 			return 0;
-
 		}
-
 	}
 	return 1;
 }
 
 /*
-* Implémenter la fonction bubble sort et trier le tableau
+* ImplÃ©menter la fonction bubble sort et trier le tableau
 */
 void bubbleSort(int elements[], int n) {
 	int temp = 0;
