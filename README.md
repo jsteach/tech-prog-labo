@@ -1,5 +1,5 @@
 # Laboratoire du cours Techniques de programmation
-
+YOLO 
 ## Première utilisation:
  - Au premier cours, faites un fork de ce projet avec votre compte github.
  - Par la suite, faite cette commande git dans un dossier qui vous convient: `git clone --recursive https://github.com/VOTRE-USERNAME-GITHUB/tech-prog-labo.git`
