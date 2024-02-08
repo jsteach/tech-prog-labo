@@ -21,37 +21,34 @@ void insertionSort(int elements[], int n) {
 void quickSort(int* elements, int left, int right) {
 
 
-	if (left >= right) {
-		return;
+	if (left < right) {
+
+		int pivot = elements[(left + right) / 2];
+		int temp = 0;
+		int L = left;
+		int R = right;
+
+		while (L <= R) {
+
+			while (elements[L] < pivot) {
+				L++;
+			}
+			while (elements[R] > pivot) {
+				R--;
+			}
+
+			if (L <= R) {
+
+				temp = elements[L];
+				elements[L] = elements[R];
+				elements[R] = temp;
+
+				L++;
+				R--;
+			}
+		}
+
+		quickSort(elements, left, R);
+		quickSort(elements, L, right);
 	}
-
-	int pivot = elements[(left + right) / 2];
-	int temp = 0;
-	int L = left;
-	int R = right;
-
-
-	while (left <= right) {
-		
-		while (elements[left] < elements[pivot]) {
-			left++;
-		}
-		while (elements[right] > elements[pivot]) {
-			right--;
-		}
-		
-		if (left <= right) {
-			
-			temp = elements[left];
-			elements[left] = elements[right];
-			elements[right] = temp;
-			
-			left++;
-			right--;
-		}
-	}
-	
-	int index = left;
-	quickSort(elements, L, index - 1);
-	quickSort(elements, index, R);
 }
