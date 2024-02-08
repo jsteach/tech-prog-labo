@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdbool.h>
+
 #include "labo.h"
 
 
@@ -27,6 +27,7 @@ void set_String(char* text, String* s) {
 	for (i = 0; i < sizeof(text); i++) {
 		s->characters[i] = text[i];
 	}
+	s->length = i-1;
 }
 
 /*
@@ -35,16 +36,19 @@ void set_String(char* text, String* s) {
 */
 int String_is_palindrome(String* s) {
 
-	int i = 0;
-	int lenght = s->length;
+	int i;
+	
 
-	for (i = 0; i < s->length / 2; i++) {
+	for (i = 0; i < s->length; i++) {
 
-		if (s->characters[i] != s->characters[s->length-i-1]) {
-			return false;
+		if (s->characters[i] != s->characters[s->length - i - 1]) {
+
+			return 0;
+
 		}
+
 	}
-	return true;
+	return 1;
 }
 
 /*
