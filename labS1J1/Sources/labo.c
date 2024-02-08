@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include "labo.h"
 
+
 /*
 * Faire une fonction qui retourne un sous-tableau de character a partir de celui passer(paramètre texte).
 */
@@ -35,14 +36,15 @@ void set_String(char* text, String* s) {
 int String_is_palindrome(String* s) {
 
 	int i = 0;
+	int lenght = s->length;
 
-	for (i = 0; i < s->length; i++) {
+	for (i = 0; i < s->length / 2; i++) {
 
 		if (s->characters[i] != s->characters[s->length-i-1]) {
-			return 0;
+			return false;
 		}
 	}
-	return 1;
+	return true;
 }
 
 /*
@@ -50,23 +52,21 @@ int String_is_palindrome(String* s) {
 */
 void bubbleSort(int elements[], int n) {
 	int temp = 0;
-	bool echanger;
-	int i, j = 0;
+	int echanger = 1;
 
-	for (i = 0; i < n-1; i++) {
-		echanger = false;
-		for (j = 0; i < n - i - 1; j++) {
+	while (echanger) {
+		echanger = 0;
 
-			if (elements[j] > elements[j+ 1]) {
-				temp = elements[j];
-				elements[j] = elements[j + 1];
-				elements[j + 1] = temp;
-				echanger = true;
+		for (int i = 0; i < n - 1; i++) {
+			if (elements[i] > elements[i + 1]) {
+
+				temp = elements[i];
+				elements[i] = elements[i + 1];
+				elements[i + 1] = temp;
+
+				echanger = 1;
 			}
+
 		}
-		if (echanger == false)
-			break;
-		
 	}
-	printf(elements[i]);
 }
