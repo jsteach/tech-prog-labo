@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -163,6 +164,7 @@ int test_code(FILE* f) {
 					printf("Tu as bien programmer: bubbleSort !\n");
 				}
 				else {
+
 					printf("Tu as un erreur dans: bubbleSort !\n");
 					result = 1;
 				}

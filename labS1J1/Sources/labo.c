@@ -89,10 +89,15 @@ void set_String(char* text, String* s) {
 	for (int i = 0; i < 256; i++) {
 
 		s->characters[i] = text[i];
-		s->length = i;
+		if (s->characters[i] == NULL) {
+
+			s->length = i;
+			
+			return s->characters;
+
+		}
 	}
 
-	return s->characters;
 }
 
 /*
@@ -106,15 +111,21 @@ int String_is_palindrome(String* s) {
 	for (int i = 0; i < s->length; i++) {
 
 		back[i] = s->characters[i];
-		if (back[i] != s->characters[x]) {
+		if (back[i] == s->characters[x]) {
+			
+			x--;
 
+		}
+		else{
+		
 			return 0;
+		
 		}
 
-		x--;
-
 	}
-	return 1;
+	return 2;
+
+	// Voir avec le prof ( lignecount impossible, Verifier bon chemin)
 }
 
 /*
@@ -122,5 +133,25 @@ int String_is_palindrome(String* s) {
 */
 void bubbleSort(int elements[], int n) {
 
+	int count = 0;
+	for (int i = 0; i < 256; i++) {
 
+		if (elements[i] == NULL) {
+
+			count = i;
+			break;
+		}
+	}
+
+	for (int i = 0; i < count-1; i++) {
+
+		if (elements[i] > elements[i + 1]) {
+
+			n = elements[i];
+			elements[i] = elements[i + 1];
+			elements[i + 1] = n;
+			i = -1;
+		}
+	}
+	return elements;
 }
