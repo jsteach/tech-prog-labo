@@ -53,6 +53,19 @@ int String_is_palindrome(String* s) {
 * Implémenter la fonction bubble sort et trier le tableau
 */
 void bubbleSort(int elements[], int n) {
+	
+	int j;
+	int _temporary;
 
+	for (int i = 0; i < n - 1; i++) {
+			
+			for (j = 0; j < n - i - 1; j++) {
+				if (elements[j] > elements[j + 1]) {
+					_temporary = elements[j];
+					elements[j] = elements[j + 1];
+					elements[j + 1] = _temporary;
+				}
+			}
+		}
+	}
 
-}
