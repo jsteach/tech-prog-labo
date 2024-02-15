@@ -1,0 +1,15 @@
+Exercise 0: 
+L52 : O(n/2)
+L53 : O(n/2)
+L55 : O(n)
+Total: O(n log n)
+
+Exercise 1:
+L6 : O(n)
+L22: O(k)
+Total: O(nk)
+
+Exercise 2: 
+L6 : O(n)
+L21: O(n)
+Total: O(n^2)
