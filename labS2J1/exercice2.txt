@@ -1,6 +1,6 @@
 L12 O(n)
-L15 O(n)
-L19 O(n)
+L15 O(k)
+L19 O(k)
 L24 O(n)
 
-Total: O(n)
+Total: O(n+k)

@@ -1,8 +1,6 @@
 int subSearch
 
-L5 O(n)
-L6 O(k)
-L11 O(q)
-L12 O(q)
+L11 O(n)
+L12 O(n)
 
-total: O(n + k + q)
+Total: O(2n)
