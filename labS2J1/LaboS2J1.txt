@@ -1,0 +1,24 @@
+Exercise 0: 
+L5: O(n)
+Total = O(n)
+
+Exercise 1:
+L10: O(n)
+L13: O(n)
+Total = O(n^2)
+
+Exercise 2:
+L12: O(n)
+L15: O(k)
+L19: O(k)
+L24: O(n)
+Total = O(n + k)
+
+Exercise 3: 
+L9 : O(n/2)
+L10: O(n)
+Total = 0(n+k+q)
+
+
+
+
