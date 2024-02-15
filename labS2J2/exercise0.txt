@@ -1,0 +1,11 @@
+13 O(n)
+15 O(k)
+21 O(nk)
+33 O(n)
+39 O(k)
+
+52 O(q)
+53 O(q)
+55 O(nk)
+
+Total O(q^nk)
