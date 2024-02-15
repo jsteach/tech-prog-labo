@@ -1,0 +1,4 @@
+L4 O(n) 
+L12 O(n) ///(bucket sort)
+
+Total: O(n)

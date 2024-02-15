@@ -1,0 +1,8 @@
+L13 O(n)
+L15 O(n)
+L21 O(n)
+L33 O(n)
+L39 O(n)
+L45 O(log(n)) //(quicksort)
+
+Total: O(n)
