@@ -1,0 +1,7 @@
+O(n)
+O(n)
+O(log n)
+O(log n)
+O(log n)
+
+pire option : O(log n)

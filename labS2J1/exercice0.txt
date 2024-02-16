@@ -1,0 +1,4 @@
+L5 : O(n)
+L20 : O(n)
+
+Pire option: O(n)

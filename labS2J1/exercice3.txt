@@ -1,0 +1,1 @@
+Pire option : O(2^n)
