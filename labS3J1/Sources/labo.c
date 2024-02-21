@@ -56,7 +56,7 @@ Node* removeByData(Node* head, void* rmData) {
 	}
 
 	if (head->data == rmData) {
-		memset(head, 0, sizeof(Node));
+		memset(temp, 0, sizeof(Node));
 	}
 }
 
