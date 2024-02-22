@@ -1,10 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
 
+#include "labo.h"
 
 /*
 * Creer un noeud et l'ajouter apres le noeud currNode. Considerer la propriete next et prev.
 */
 void insert(Node* currNode, void* newData) {
+	Node n = { 0 };
+	n.data = newData;
+	n.prev = NULL;
+	n.next = NULL;
 
+	if (currNode.next != NULL) {
+		n.next = currNode.next;
+		currNode.next->prev = n;
+	}
 }
 
 /*
