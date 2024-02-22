@@ -35,7 +35,8 @@ void insertHead(Node * head, void* newData){
 }
 
 /*
-* Supprimer le noeud ayant la valeur de pointeur de data i.e. node->data == rmData. Par simplicite, pour supprimer faite un memset(node,0,sizeof(Node));
+* Supprimer le noeud ayant la valeur de pointeur de data i.e. node->data == rmData. 
+* Par simplicite, pour supprimer faite un memset(node,0,sizeof(Node));
 * Retourner le noeud juste avant celui supprimer
 */
 
@@ -66,8 +67,26 @@ Node* removeByData(Node* head, void* rmData){
 */
 
 Node* removeByName(Node* head, char* name){
+	Node* temp = head;
+	Node* last = NULL;
 	
+	while (temp != NULL) {
+		last = temp;
+		temp = temp->next;
+	}
 
+	Person* pers = (Person*)head->data;
+
+	if (pers->name != name) {
+		return NULL;
+	}
+	if (last == NULL) {
+		pers = temp->next;
+	}
+	else {
+
+	}
+	return pers;
 }
 
 /*
