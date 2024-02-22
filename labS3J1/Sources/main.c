@@ -122,11 +122,11 @@ int test_code(FILE* f) {
 		fprintf(stderr, "Make sure the head Node gets set on insertHead, at line %i\n", hline);
 		out = -1;
 	}
-	int i = 0;
+	int i = 1;
 	Node* node = &head;
 	while (node != NULL) {
 		Person* p = (Person*)node->data;
-		if (p != NULL && (strcmp(p->name, persons[i].name) != 0 || p->age != persons[i].age)) {
+		if (p != NULL && (strcmp(p->name, persons[i-1].name) != 0 || p->age != persons[i-1].age)) {
 			fprintf(stderr, "Insertion failed on person %s with age %i, at line %i\n", persons[i].name, (int)persons[i].age,line);
 			out = -1;
 		}
