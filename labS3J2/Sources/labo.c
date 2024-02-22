@@ -26,31 +26,30 @@ void insert(Node* currNode, void* newData) {
   Si le noeud head est vide(data) lui donner la nouvelle valeur passer.
 */
 void insertTail(Node* head, void* newData) {
-	Node n = { 0 };
-	n.data = newData;
-	n.prev = NULL;
-	n.next = NULL;
+	Node* n = allocate(sizeof(Node));
+	Node* currNode = head->prev;
 
 	if (head != NULL) {
-		
+		Insert(currNode, newData);
 	}
 	else {
 		
 	}
 }
 
+/*
 * Creer un noeud et l'ajouter apres le noeud head. 
   Si le noeud head est vide(data) lui donner la nouvelle valeur passer.
 */
 void insertHead(Node* head, void* newData) {
-	Node n = { 0 };
-	n.data = newData;
+	Node* n = allocate(sizeof(Node));
+	n->data = newData;
 
 	if (head != NULL) {
-		head->next = n.data;
+		head->next = n;
 	}
 	else {
-		head = n.data;
+		head = n;
 	}
 }
 
