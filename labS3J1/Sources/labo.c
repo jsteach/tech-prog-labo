@@ -69,24 +69,19 @@ Node* removeByData(Node* head, void* rmData){
 Node* removeByName(Node* head, char* name){
 	Node* temp = head;
 	Node* last = NULL;
+	Person* p = (Person*)head->data;
 	
 	while (temp != NULL) {
+		
+		if (strcmp(p->name, name)) {
+			
+			memset(head, 0, sizeof(Node));
+		}
 		last = temp;
 		temp = temp->next;
 	}
 
-	Person* pers = (Person*)head->data;
-
-	if (pers->name != name) {
-		return NULL;
-	}
-	if (last == NULL) {
-		pers = temp->next;
-	}
-	else {
-
-	}
-	return pers;
+	return p;
 }
 
 /*

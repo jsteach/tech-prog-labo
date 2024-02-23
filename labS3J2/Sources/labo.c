@@ -26,14 +26,13 @@ void insert(Node* currNode, void* newData) {
   Si le noeud head est vide(data) lui donner la nouvelle valeur passer.
 */
 void insertTail(Node* head, void* newData) {
-	Node* n = allocate(sizeof(Node));
 	Node* currNode = head->prev;
 
 	if (head != NULL) {
-		Insert(currNode, newData);
+		insert(currNode, newData);
 	}
 	else {
-		
+		head = newData;
 	}
 }
 
@@ -56,10 +55,20 @@ void insertHead(Node* head, void* newData) {
 /*
 * Enlever le noeud de la liste et retourner le noeud avec aucune reference(i.e. next et prev == NULL)
 */
-Node* removeNode(Node* currNode);
+Node* removeNode(Node* currNode) {
+	
+	//currNode = memset(currNode,0,sizeof(Node))
+	//Attacher currNode.prev.next avec currNode.next.prev (??)
+	//currNode next et prev = NULL
+
+}
 
 /*
 * Ajouter dans le tableau le nom de chacun en ordre alphabetic. 
   Par simplicite, considerer seulement les deux premiere lettre.
 */
-void alphabetise(Node* head, char* names[]);
+void alphabetise(Node* head, char* names[]) {
+
+	//Person* p = (Person*)head->data;
+
+}
