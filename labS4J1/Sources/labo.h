@@ -8,7 +8,7 @@ void* allocate(size_t size);
 */
 
 typedef struct Stack {
-	size_t max_size;
+	int max_size;
 	int top;
 	void** data;
 }Stack;
