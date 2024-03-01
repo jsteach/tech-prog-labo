@@ -8,8 +8,8 @@ void* allocate(size_t size);
   max_size de type size_t,top de type size_t et un tableau de type void**.
 */
 typedef struct Stack {
-	size_t max_size;
-	size_t top;
+	int max_size;
+	int top;
 	void** data;
 }Stack;
 

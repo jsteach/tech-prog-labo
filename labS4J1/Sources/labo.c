@@ -21,11 +21,11 @@ Stack* new_stack(size_t max_size) {
 * Ajouter l'element sur la stack. Prevener l'overflow de la stack.
 */
 void push(Stack* s, void* newData) {
+	
 	if (s->top + 1 < s->max_size) {
 		s->top += 1;
 		s->data[s->top] = newData;
 	}
-	return s;
 }
 
 /*
@@ -37,6 +37,7 @@ void* pop(Stack* s) {
 
 	if (s->top - 1 >= 0) {
 		out = s->data[s->top];
+		s->data[s->top] = NULL;
 		s->top -= 1;
 	}
 	return out;
@@ -52,7 +53,7 @@ void* peek(Stack* s) {
 	if (out != NULL) {
 		push(s, out);
 	}
-	return out; 
+	return out;
 }
 
 /*
@@ -60,13 +61,15 @@ void* peek(Stack* s) {
   Vous ne devez pas utilise la variable temp qui est un autre Stack.
 */
 void reverseStack(Stack* s) {
-	void* _temp[1024];
-	
-	if (s->top != NULL) {
-		
+	void* tempArr[1024];
+	int index = 0;
+
+	while (s->top >= 0) {
+		tempArr[index++] = pop(s);
 	}
-
-
+	for (int i = index - 1; i >= 0; i--) {
+		push(s, tempArr[i]);
+	}
 }
 
 /*
@@ -75,5 +78,21 @@ void reverseStack(Stack* s) {
   Vous devez utiliser push,pop et/ou peek.
 */
 void sortStack(Stack* s) {
-	
+	Stack* t = new_stack(s->max_size);
+	Person* currPers = NULL;
+
+	while (s->top >= 0) {
+		currPers = (Person*)peek(s);
+		pop(s);
+
+		while (t->top >= 0 && ((Person*)peek(t))->age < currPers->age) {
+			push(s, pop(t));
+		}
+		push(t, currPers);
+	}
+
+	while (t->top >= 0) {
+		push(s, pop(t));
+	}
 }
+
