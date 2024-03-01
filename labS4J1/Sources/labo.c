@@ -42,8 +42,8 @@ void* pop(Stack* s) {
 	if (s->top - 1 >= 0) {
 		out = s->data[s->top];
 		s->top -= 1;
-		return out;
 	}
+	return out;
 }
 
 /*
@@ -63,11 +63,16 @@ void* peek(Stack* s) {
 */
 void reverseStack(Stack* s) {
 
+	int n = s->max_size;
+	
 	void* temp[1028];
 
+	for (int i = 0; i < s->max_size; i++) {
+
+	}
 	
 	temp[0] = pop(s->top);
-
+	/*?????*/
 }
 
 /*
