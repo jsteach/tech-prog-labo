@@ -1,4 +1,6 @@
+#include <stdio.h>
 
+#include "labo.h"
 
 /*
 * Creer un noeud et l'ajouter apres le noeud currNode. Considerer la propriete next et prev.
