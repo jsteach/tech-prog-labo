@@ -23,7 +23,16 @@ void push(Queue* q, Node* n) {
 * Enlever l'element de la queue/file et retourner le noeud. Si jamais il n'y a pas de noeud, retourner NULL.
 */
 Node* pop(Queue* q) {
-
+	Node* n = q->prev;
+	if (q->prev != NULL) {
+		if (q->prev == q->next) {
+			q->next = q->prev = NULL;
+		}
+		else {
+			q->prev = q->prev->prev;
+		}
+	}
+	return n;
 }
 
 
@@ -32,7 +41,7 @@ Node* pop(Queue* q) {
 * Retourner l'element de la fin de la queue/file sans l'enlever de la queue. Si jamais il n'y a pas d'element, retourner NULL.
 */
 Node* peek(Queue* q) {
-
+	return q->prev;
 }
 
 /*
@@ -40,7 +49,7 @@ Node* peek(Queue* q) {
 * On utilise pas une fonction de tri.
 */
 void pushAsPriorityQueue(Queue* q, Node* n) {
-
+	
 }
 
 
