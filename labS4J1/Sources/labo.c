@@ -65,14 +65,14 @@ void reverseStack(Stack* s) {
 
 	int n = s->max_size;
 	
-	void* temp[1028];
+	void* temp[32];
 
 	for (int i = 0; i < s->max_size; i++) {
-
+		temp[0] = pop(s->top);
 	}
 	
 	temp[0] = pop(s->top);
-	/*?????*/
+	/*????????*/
 }
 
 /*
