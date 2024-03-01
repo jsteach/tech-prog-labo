@@ -7,7 +7,10 @@ void* allocate(size_t size);
 * Declarer une structure de donnee appeler Node qui est un noeud d'une liste doublement chainee.
 */
 typedef struct Node Node;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fb3e7a91060ae37389efb088623aca8909701fee
 struct Node {
 	void* data;
 	Node* prev;

@@ -67,11 +67,19 @@ Node* removeByData(Node* head, void* rmData) {
 
 Node* removeByName(Node* head, char* name) {
 
-	if (head->data == name) {
-		
-		memset(head, 0, sizeof(Node));
+	Person* p = (Person*)head->data;
+	Node* temp = head;
+	
+	while(temp != NULL){
+		temp = temp->next;
 
+		if (p->name == name) {
+		
+			memset (head, 0, sizeof(Node));
+
+		}
 	}
+
 
 }
 
