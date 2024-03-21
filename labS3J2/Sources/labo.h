@@ -1,11 +1,17 @@
 #include <stdint.h>
 #include <assert.h>
 
+
+
 void* allocate(size_t size);
 
-/*
-* Declarer une structure de donnee appeler Node qui est un noeud d'une liste doublement chainee.
-*/
+typedef struct Node Node;
+
+struct Node {
+	void* data;
+	Node* prev;
+	Node* next;
+};
 
 typedef struct person_t {
 	char name[256];

@@ -1,0 +1,7 @@
+6 O(n)
+
+19 O(k)
+21 O(q)
+23 O(n)
+
+Total O(n + k^q^n)
